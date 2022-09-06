@@ -1,0 +1,429 @@
+
+@import "./base/base";
+@import "./themes/variable";
+@import './pages/index/index.scss';
+
+header {
+    background-color: $bg-c1-dark;
+    .container-fluid {
+        padding: 10px 24px;
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .header_left {
+                img {
+                    width: 116px;
+                    height: 32px;
+                }
+            }
+            .header_right {
+                .cart {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        img {
+                            width: 31px;
+                            height: 31px;
+                        }
+                    }
+                    span {
+                        font-style: normal;
+                        line-height: 36px;
+                        margin-right: 20px;
+                        
+                        @include text($text-c1-light,$text-3xl , $text-light);
+                        @media screen and (max-width:445px) {
+                            font-size: 23px;
+                            margin-right: 10px;
+                        }
+                    }
+                    a {
+                        p {
+                            margin-bottom: 0;
+                            font-style: normal;
+                            line-height: 19px;
+                            margin-right: 35px;
+                            @include text($text-c2-light, $text-base , $text-light);
+                            @media screen and (max-width:445px) {
+                                font-size: 13px;
+                                margin-right: 10px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mynavbar {
+    padding: 16px 13px;
+    a {
+        @include text($text-c1-dark,$text-2xl ,$text-light );
+        margin: 0 15px;
+        font-style: normal;
+        line-height: 24px;    
+        opacity: 0.7;
+        position: relative;
+        @media screen and (max-width:443px) {
+            font-size: 13px;
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            background: #030303;
+            border: 1px solid #000000;
+            transform: scale(0);
+            transition: transform 0.3s;
+        }
+        &:hover {
+            opacity: 1;
+            font-weight: $text-regular;
+            &::before {
+                transform: scale(1);
+            }
+        }
+    }
+    .active {
+        opacity: 1;
+        &::before {
+            transform: scale(1);
+        }
+    }
+}
+
+.carousel {
+    .carousel-inner {
+        .carousel-item {
+            .image {
+               background-image: url("../assets/img/image\ 6.png");
+               background-position: center bottom;
+               background-repeat: no-repeat;
+               background-size: cover;
+               width: 100%;
+               min-height: 530px;
+               display: block !important;
+            }
+            .carousel-caption {
+                right: 9%;
+                left: 9%;
+                margin-bottom: 50px;
+                @media screen and (max-width:518px) {
+                    margin-bottom: 0;
+                }
+                .row {
+                    justify-content: center;
+                    align-items: center;
+                    @media screen and (max-width:1260px) {
+                        margin-bottom: 0 !important;
+                        padding-bottom: 100px;
+                    }
+                    @media screen and (max-width:1001px) {
+                        margin-bottom: 0 !important;
+                        padding-bottom: 100px;
+                    }
+                    @media screen and (max-width:976px) {
+                        margin-bottom: 0 !important;
+                        padding-bottom: 120px;
+                    }
+                    @media screen and (max-width:768px) {
+                        margin-bottom: 0 !important;
+                        padding-bottom: 150px;
+                    }
+                    .carousel-left {
+                        @media screen and (max-width:768px) {
+                            width: 60%;
+                        }
+                        @media screen and (max-width:518px) {
+                            width: 100%;
+                        }
+                        img {
+                            width: 100%;
+                            @media screen and (max-width:518px) {
+                                width: 100%;
+                                position: relative;
+                                left: 25%;
+                            }
+                        }
+                    }
+                    .carousel-right {
+                        text-align: left;
+                        @media screen and (max-width:518px) {
+                            text-align: center;
+                        }
+                        @media screen and (max-width:768px) {
+                            width: 40%;
+                        }
+                        @media screen and (max-width:518px) {
+                            width: 100%;
+                        }
+                        h2 {
+                            @include text($text-c1-dark,$text-4xl,$text-light);
+                            font-style: normal;
+                            line-height: 48px;
+                            @media screen and (max-width:819px) {
+                               font-size: 35px;
+                            }
+                            @media screen and (max-width:768px) {
+                                font-size: 32px;
+                             }
+                             @media screen and (max-width:701px) {
+                                font-size: 30px;
+                             }
+                             @media screen and (max-width:678px) {
+                                font-size: 30px;
+                             }
+                             @media screen and (max-width:659px) {
+                                font-size: 27px;
+                                margin-bottom: 0px;
+                             }
+                             @media screen and (max-width:595px) {
+                                font-size: 23px;
+                                margin-bottom: 0px;
+                             }
+
+                        }
+                        p {
+                            @include text($text-c1-dark,$text-2xl ,$text-light );
+                            font-style: normal;
+                            line-height: 24px;
+                            margin-bottom: 30px;
+                            @media screen and (max-width:700px) {
+                                font-size: 16px;
+                                margin-bottom: 20px;
+                             }
+                            @media screen and (max-width:608px) {
+                                font-size: 16px;
+                                margin-bottom: 20px;
+                             }
+                        }
+                        button {
+                            @include button($text-c1-light, $bg-c1-primary ,$text-2xl , $text-light);
+                            font-style: normal;
+                            line-height: 24px;
+                            border: none;
+                            width: 150px;
+                            height: 50px;
+                            @media screen and (max-width:608px) {
+                                width: 130px;
+                                height: 35px;
+                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .carousel-control-next {
+        width: 9%;
+        
+    }
+    .carousel-control-prev {
+        width: 9%;
+       
+    }
+}
+
+
+.product {
+    h2 {
+        text-align: center;
+        margin-bottom: 89px;
+        margin-top: 46px;
+    }
+    .container {
+        @media screen and (max-width:998px) {
+            max-width: 820px;
+        }
+        @media screen and (max-width:768px) {
+            max-width: 640px;
+        }
+        .row {
+            .card_product {
+                @media screen and (max-width:576px) {
+                    width: 50%;
+                }
+                .card {
+                    background: $bg-c2-light;
+                    margin: 0 15px 49px 15px;
+                    border: none;
+                    @media screen and (max-width:768px) {
+                        margin: 0 5px 49px 5px;
+                    }
+                    img {
+                        width: 100%;
+                        padding: 30px 45px;
+                    }
+                    .card-body {
+                        padding: 0;
+                        h5 {
+                            @include text($text-c1-dark,$text-2xl-4 ,$text-light );
+                            font-style: normal;
+                            line-height: 29px;
+                            margin-left: 23px;
+                            @media screen and (max-width:576px) {
+                                font-size: 18px;
+                                margin-bottom: 0;
+                            }
+                            @media screen and (max-width:576px) {
+                                font-size: 14px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        p {
+                            @include text($text-c2-dark,$text-2xl , $text-light);
+                            font-style: normal;
+                            line-height: 24px;
+                            margin-left: 23px;
+                            @media screen and (max-width:576px) {
+                                font-size: 16px;
+                            }
+                            @media screen and (max-width:576px) {
+                                font-size: 12px;
+                            }
+                        }
+                        .buy {
+                            button {
+                                @include button($text-c1-dark,$bg-c2-primary ,$text-2xl-4 , $text-light );
+                                font-style: normal;
+                                line-height: 29px;
+                                width: 50%;
+                                border: none; 
+                                
+                                @media screen and (max-width:576px) {
+                                    font-size: 18px;
+                                } 
+                                @media screen and (max-width:576px) {
+                                    font-size: 14px;
+                                }                           
+                            }
+                            span {
+                                @include text($text-c1-dark,$text-2xl-4 ,$text-semibold );
+                                font-style: normal;
+                                line-height: 29px;
+                                text-align: center;
+                                margin-bottom: 0;
+                                padding: 15px 0;
+                                width: 50%;
+                                background: $bg-c1-secondary;
+                                @media screen and (max-width:576px) {
+                                    font-size: 18px;
+                                    padding: 7px 0;
+                                }
+                                @media screen and (max-width:576px) {
+                                    font-size: 12px;
+                                    padding: 7px 0;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    margin-top: 90px;
+    .container-fluid{
+        .above{
+            padding: 30px 180px;
+            background-color: $bg-c2-secondary;
+            @media screen and (max-width:1052px) {
+                padding: 30px 80px;
+            }
+            @media screen and (max-width:691px) {
+                padding: 30px 30px;
+            }
+            @media screen and (max-width:320px) {
+                padding: 15px 0px;
+            }
+            .infor{
+                @media screen and (max-width:537px) {
+                    width: 50%;
+                }
+                border-right: 1px solid #edeaea;
+                padding: 0 30px;
+                h2{
+                    font-size: $text-2xl;
+                    font-weight: $text-bolder;
+                }
+                a{
+                    color: $text-c1-dark;
+                    display: block;
+                    font-size: $text-midbase;
+                }
+            }
+            .register{
+                @media screen and (max-width:537px) {
+                    width: 100%;
+                    padding: 15px 30px;
+                }
+                
+                h2{
+                    font-size: $text-2xl;
+                    font-weight: $text-bolder;
+                }
+                p{
+                    color: $text-c1-dark;
+                    margin-bottom: 5px;
+                    font-size: $text-midbase;
+                }
+                a{
+                    color: rgb(205, 76, 76);
+                    font-size: $text-midbase;
+                }
+            }
+        }
+        .bottom{
+            padding: 30px 180px;
+            background-color: $bg-c3-secondary;
+            @media screen and (max-width:1052px) {
+                padding: 30px 80px;
+            }
+            @media screen and (max-width:691px) {
+                padding: 30px 30px;
+            }
+            @media screen and (max-width:320px) {
+                padding: 15px 15px;
+            }
+            .your{
+                @media screen and (max-width:423px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                h2{
+                    font-size: 20px;
+                    font-weight: $text-bolder;                  
+                }
+                p{
+                    color: $text-c1-dark;
+                    margin-bottom: 5px;
+                    font-size: $text-midbase;
+                }
+                a{
+                    color: rgb(205, 76, 76);
+                    font-size: $text-midbase;
+                }
+            }
+        }
+    }
+    .backToTop{
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        @media screen and (max-width:776px) {
+            bottom: 30px;
+            right: 30px;
+        }
+        i{
+            font-size: $text-3xl;
+            color: $text-c2-dark;
+        }
+    }
+}

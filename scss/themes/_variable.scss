@@ -1,0 +1,48 @@
+$bg-c1-primary: #f8b653;
+$bg-c2-primary: #e1b067;
+$bg-c1-secondary: #dedddc;
+$bg-c2-secondary: #fafafa;
+$bg-c3-secondary: #ede9e9;
+$bg-c1-dark:black;
+$bg-c1-light:white;
+$bg-c2-light:#f8f8f8;
+
+$text-c1-dark:black;
+$text-c2-dark:#cbc9c9;
+$text-c3-dark:#140101;
+$text-c4-dark:#1e1d1d;
+$text-c1-light:white;
+$text-c2-light:#f7f7f7;
+$text-c3-light:#fff8f8;
+$text-c1-secondary:#cd4c4c;
+
+$text-light:300;
+$text-regular:400;
+$text-prebold:500;
+$text-semibold:600;
+$text-bold:700;
+$text-bolder:800;
+
+$text-xs:14px;
+$text-midbase:15px;
+$text-base:16px;
+$text-xl:18px;
+$text-2xl:20px;
+$text-2xl-4:24px;
+$text-3xl:30px;
+$text-4xl:40px;
+$text-5xl:50px;
+$text-6xl:60px;
+
+@mixin text($c:$text-c1-dark,$fs:$text-midbase,$fw:$text-regular) {
+    color: $c;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin button($c,$bg,$fs,$fw) {
+    color: $c;
+    font-size: $fs;
+    font-weight: $fw;
+    background-color: $bg;
+}

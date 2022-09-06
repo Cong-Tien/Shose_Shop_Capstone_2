@@ -1,0 +1,101 @@
+@import "../../base/base";
+@import "../../themes/variable";
+footer{
+    margin-top: 90px;
+    .container-fluid{
+        .above{
+            padding: 30px 180px;
+            background-color: $bg-c2-secondary;
+            @media screen and (max-width:1052px) {
+                padding: 30px 80px;
+            }
+            @media screen and (max-width:691px) {
+                padding: 30px 30px;
+            }
+            @media screen and (max-width:320px) {
+                padding: 15px 0px;
+            }
+            .infor{
+                @media screen and (max-width:537px) {
+                    width: 50%;
+                }
+                border-right: 1px solid #edeaea;
+                padding: 0 30px;
+                h2{
+                    font-size: $text-2xl;
+                    font-weight: $text-bolder;
+                }
+                a{
+                    color: $text-c1-dark;
+                    display: block;
+                    font-size: $text-midbase;
+                }
+            }
+            .register{
+                @media screen and (max-width:537px) {
+                    width: 100%;
+                    padding: 15px 30px;
+                }
+                
+                h2{
+                    font-size: $text-2xl;
+                    font-weight: $text-bolder;
+                }
+                p{
+                    color: $text-c1-dark;
+                    margin-bottom: 5px;
+                    font-size: $text-midbase;
+                }
+                a{
+                    color: rgb(205, 76, 76);
+                    font-size: $text-midbase;
+                }
+            }
+        }
+        .bottom{
+            padding: 30px 180px;
+            background-color: $bg-c3-secondary;
+            @media screen and (max-width:1052px) {
+                padding: 30px 80px;
+            }
+            @media screen and (max-width:691px) {
+                padding: 30px 30px;
+            }
+            @media screen and (max-width:320px) {
+                padding: 15px 15px;
+            }
+            .your{
+                @media screen and (max-width:423px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                h2{
+                    font-size: 20px;
+                    font-weight: $text-bolder;                  
+                }
+                p{
+                    color: $text-c1-dark;
+                    margin-bottom: 5px;
+                    font-size: $text-midbase;
+                }
+                a{
+                    color: rgb(205, 76, 76);
+                    font-size: $text-midbase;
+                }
+            }
+        }
+    }
+    .backToTop{
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        @media screen and (max-width:776px) {
+            bottom: 30px;
+            right: 30px;
+        }
+        i{
+            font-size: $text-3xl;
+            color: $text-c2-dark;
+        }
+    }
+}
